@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .card-content-height-lg {
+    height: calc(50vh - 100px);
+  }
+  
+  .card-content-height-md {
+    height: calc(40vh - 100px);
+  }
+  
+  .card-content-height-sm {
+    height: calc(30vh - 100px);
+  }
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 56% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 56% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 56% 11%;
+    --primary: 174 78% 40%; /* Teal from logo */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 198 90% 51%; /* Light blue from logo */
+    --secondary-foreground: 222 56% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 20% 50%;
+    --accent: 198 90% 51%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 40% 90%;
+    --input: 210 40% 90%;
+    --ring: 174 78% 40%;
+    --radius: 0.5rem;
+    
+  }
+
+  .dark {
+    --background: 222 56% 11%;
+    --foreground: 0 0% 100%;
+    --card: 222 56% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 56% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 174 78% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 198 90% 51%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 222 56% 20%;
+    --muted-foreground: 210 20% 80%;
+    --accent: 198 90% 51%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 56% 20%;
+    --input: 222 56% 20%;
+    --ring: 174 78% 40%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.wmde-markdown.wmde-markdown-color>ul{
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* Status Colors */
+.status-online {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-offline {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-missing {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-overloaded {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-fulfilled {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-detected {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-not-detected {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-is-outlier {
+  @apply bg-blue-100 text-blue-800;
+}

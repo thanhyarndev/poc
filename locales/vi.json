@@ -1,0 +1,468 @@
+{
+    "login": {
+      "title": "Đăng Nhập",
+      "description": "Sử dụng tên đăng nhập hoặc số điện thoại để truy cập tài khoản của bạn.",
+      "username": "Tên đăng nhập hoặc Số điện thoại",
+      "usernamePlaceholder": "Nhập tên đăng nhập hoặc số điện thoại",
+      "password": "Mật khẩu",
+      "forgotPassword": "Quên mật khẩu?",
+      "submit": "Đăng Nhập",
+      "linkedin": "Đăng nhập bằng LinkedIn",
+      "noAccount": "Bạn chưa có tài khoản?",
+      "signup": "Tạo tài khoản mới",
+      "error": "Tên đăng nhập hoặc mật khẩu không đúng.",
+      "loading": "Đang tải..."
+    },
+    "registration": {
+      "title": "Đăng Ký",
+      "description": "Tạo tài khoản mới để bắt đầu.",
+      "username": "Tên đăng nhập",
+      "usernamePlaceholder": "Chọn tên đăng nhập",
+      "email": "Email",
+      "emailPlaceholder": "Nhập email của bạn",
+      "phone": "Số điện thoại",
+      "phonePlaceholder": "Nhập số điện thoại của bạn",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "Chọn mật khẩu",
+      "confirmPassword": "Xác nhận mật khẩu",
+      "confirmPasswordPlaceholder": "Nhập lại mật khẩu",
+      "submit": "Đăng Ký",
+      "alreadyAccount": "Đã có tài khoản?",
+      "login": "Đăng nhập",
+      "message": {
+        "required": "Trường này là bắt buộc.",
+        "invalidEmail": "Địa chỉ email không hợp lệ.",
+        "minPassword": "Mật khẩu phải có ít nhất 6 ký tự.",
+        "passwordMismatch": "Mật khẩu không khớp.",
+        "success": "Đăng ký thành công! Nhưng tài khoản của bạn CHƯA được kích hoạt! Vui lòng kiểm tra email để xác minh tài khoản!",
+        "captchaExpired": "Captcha đã hết hạn!"
+      },
+      "captcha": "Xác nhận bạn không phải robot",
+      "name": "Họ và tên",
+      "namePlaceholder": "Họ và tên thật của bạn",
+      "gender": "Giới tính",
+      "genderSelect": "Chọn giới tính của bạn",
+      "male": "Nam",
+      "female": "Nữ",
+      "other": "Khác",
+      "success": "Đăng ký thành công"
+    },
+    "jobs": {
+      "title": "Tìm kiếm công ty tiếp theo của bạn",
+      "filters": {
+        "search": {
+          "label": "Tìm kiếm công ty",
+          "placeholder": "Tìm theo tiêu đề, từ khóa..."
+        },
+        "category": {
+          "placeholder": "Chọn loại công ty",
+          "label": "Loại hình",
+          "Relationship": "Công ty",
+          "Friends": "Bạn bè",
+          "Activity": "Hoạt động"
+        },
+        "location": {
+          "label": "Địa điểm",
+          "remote": "Từ xa",
+          "onsite": "Tại văn phòng",
+          "hybrid": "Kết hợp"
+        },
+        "hours": {
+          "label": "Số giờ yêu cầu",
+          "allTime": "Tất cả thời gian",
+          "lessThan20": "Ít hơn 20 giờ/tuần",
+          "between20And30": "20-30 giờ/tuần",
+          "moreThan30": "Hơn 30 giờ/tuần"
+        },
+        "salary": {
+          "label": "Mức lương",
+          "any": "Bất kỳ",
+          "under50k": "Dưới 50 triệu",
+          "50kTo100k": "50 triệu - 100 triệu",
+          "100kPlus": "Trên 100 triệu"
+        },
+        "jobLocation": {
+          "label": "Địa điểm",
+          "placeholder": "Việt Nam"
+        },
+        "apply": "Áp dụng"
+      },
+      "listing": {
+        "applicants": "ứng viên",
+        "postedDate": "{date}",
+        "noJobs": "Không tìm thấy công việc nào",
+        "loadMore": "Xem thêm"
+      },
+      "details": {
+        "apply": "Ứng Tuyển Ngay",
+        "description": "Mô tả",
+        "requirements": "Yêu cầu",
+        "hiringListing": "Gặp gỡ đội tuyển dụng",
+        "selectJob": "Chọn một công việc để xem chi tiết",
+        "aboutCompany": "Về công ty",
+        "selectOne": "Chọn một để xem",
+        "edit": "Chỉnh sửa",
+        "viewResume": "PDF - Hồ sơ của {name}",
+        "resume": "Hồ sơ",
+        "viewCoverLetter": "Thư xin việc của {name}",
+        "customQuestions": "Câu trả lời",
+        "coverLetter": "Thư xin việc"
+      }
+    },
+    "jobListing": {
+      "form": {
+        "title": "Đăng tin tuyển dụng mới",
+        "subtitle": "Tìm kiếm công ty của bạn",
+        "fields": {
+          "title": {
+            "label": "Tiêu đề",
+            "placeholder": "Nhập tiêu đề",
+            "description": "Cung cấp tiêu đề cho cơ hội bạn đang đăng tin.",
+            "errors": {
+              "required": "Tiêu đề là bắt buộc.",
+              "min": "Tiêu đề phải có ít nhất 5 ký tự."
+            }
+          },
+          "location": {
+            "label": "Địa điểm",
+            "placeholder": "Nhập địa điểm làm việc",
+            "description": "Chỉ rõ thành phố, khu vực, hoặc từ xa cho vị trí.",
+            "errors": {
+              "required": "Địa điểm là bắt buộc."
+            }
+          },
+          "description": {
+            "label": "Mô tả",
+            "description": "Viết một mô tả chi tiết. Bao gồm trách nhiệm, yêu cầu, và các chi tiết liên quan, bạn có thể chia sẻ điều gì đó cá nhân.",
+            "errors": {
+              "required": "Mô tả công việc là bắt buộc.",
+              "max": "Mô tả quá dài, chúng tôi chỉ cho phép 5192 ký tự"
+            }
+          },
+          "category": {
+            "label": "Chọn danh mục",
+            "description": "Chọn danh mục phù hợp nhất với công việc hoặc cơ hội.",
+            "options": {
+              "relationship": "Mối quan hệ",
+              "friends": "Bạn bè",
+              "activity": "Hoạt động"
+            },
+            "descriptions": {
+              "relationship": "Cơ hội để hình thành hoặc khám phá các mối quan hệ cá nhân.",
+              "friends": "Hợp tác hoặc dự án với bạn bè hoặc người quen.",
+              "activity": "Sự kiện hoặc hoạt động liên quan đến nhóm hoặc cá nhân."
+            },
+            "errors": {
+              "required": "Vui lòng chọn một danh mục."
+            }
+          },
+          "openFor": {
+            "label": "Mở Cho",
+            "description": "Chỉ rõ đối tượng hoặc nhóm mà cơ hội này dành cho. Lưu ý tùy chọn này CHỈ để hiển thị huy hiệu, nó KHÔNG lọc đơn ứng tuyển, họ vẫn có thể ứng tuyển vào công việc này",
+            "options": {
+              "male": "Nam",
+              "female": "Nữ",
+              "all": "Tất cả"
+            },
+            "descriptions": {
+              "male": "Dành cho ứng viên hoặc người tham gia nam.",
+              "female": "Dành cho ứng viên hoặc người tham gia nữ.",
+              "all": "Dành cho tất cả giới tính."
+            },
+            "errors": {
+              "required": "Vui lòng chỉ rõ cơ hội này dành cho ai."
+            }
+          },
+          "tags": {
+            "label": "Thẻ",
+            "placeholder": "Nhập một thẻ...",
+            "description": "Thêm thẻ để phân loại tin đăng của bạn.",
+            "errors": {
+              "max": "Bạn có thể thêm tối đa 10 thẻ.",
+              "unique": "Mỗi thẻ phải là duy nhất."
+            }
+          },
+          "customQuestions": {
+            "label": "Câu hỏi tùy chỉnh",
+            "placeholder": "Nhập một câu hỏi...",
+            "description": "Thêm bất kỳ câu hỏi cụ thể nào bạn muốn hỏi.",
+            "errors": {
+              "max": "Bạn có thể thêm tối đa 5 câu hỏi tùy chỉnh.",
+              "unique": "Mỗi câu hỏi phải là duy nhất."
+            }
+          },
+          "isPublic": {
+            "label": "Cho phép người khác trên internet/nextwaves xem bài đăng này. Ngay cả khi tắt, bạn vẫn có thể chia sẻ liên kết đến bài đăng này, và những người có liên kết có thể ứng tuyển."
+          },
+          "isLGBT": {
+            "label": "Bài đăng này có dành cho LGBT không?"
+          },
+          "withFriends": {
+            "label": "\"Đội tuyển dụng\" có bạn bè của bạn không?"
+          }
+        },
+        "submit": "Đăng tin",
+        "successMessage": "Đã ứng tuyển! Hãy nhớ kiểm tra email hàng ngày để nhận phản hồi từ đội tuyển dụng!",
+        "successTitle": "Đã đăng!"
+      }
+    },
+    "jobApplication": {
+      "form": {
+        "title": "Đơn ứng tuyển",
+        "subtitle": "Ứng tuyển vào ",
+        "submit": "Gửi đơn ứng tuyển",
+        "fields": {
+          "fullName": {
+            "label": "Họ và tên",
+            "placeholder": "Nhập họ và tên của bạn"
+          },
+          "email": {
+            "label": "Địa chỉ email",
+            "placeholder": "Nhập email của bạn"
+          },
+          "resume": {
+            "label": "Hồ sơ",
+            "description": "Tải lên hồ sơ của bạn dưới định dạng PDF.",
+            "selectedFile": "Hồ sơ đã chọn",
+            "uploadResumeError": "Vui lòng tải lên file PDF hợp lệ cho hồ sơ của bạn."
+          },
+          "coverLetter": {
+            "label": "Thư xin việc",
+            "description": "Tải lên thư xin việc của bạn dưới định dạng PDF (không bắt buộc).",
+            "selectedFile": "Thư xin việc đã chọn",
+            "uploadCoverLetterError": "Vui lòng tải lên file PDF hợp lệ cho thư xin việc của bạn."
+          },
+          "coverLetterVideo": {
+            "label": "Video thư xin việc",
+            "description": "Cung cấp đường dẫn đến video thư xin việc của bạn (không bắt buộc), phải là video YouTube https://www.youtube.com/watch?v=dQw4w9WgXcQ.",
+            "placeholder": "https://youtu.be/"
+          },
+          "questions": {
+            "label": "Câu hỏi bổ sung",
+            "description": "Vui lòng trả lời các câu hỏi sau."
+          }
+        },
+        "validation": {
+          "fullName": {
+            "required": "Họ và tên là bắt buộc."
+          },
+          "email": {
+            "required": "Email là bắt buộc.",
+            "invalid": "Vui lòng nhập địa chỉ email hợp lệ."
+          },
+          "resume": {
+            "required": "Hồ sơ là bắt buộc.",
+            "fileType": "Chỉ chấp nhận file PDF cho hồ sơ."
+          },
+          "coverLetter": {
+            "fileType": "Chỉ chấp nhận file PDF cho thư xin việc."
+          },
+          "coverLetterVideo": {
+            "invalid": "Vui lòng nhập URL hợp lệ."
+          },
+          "answers": {
+            "required": "Trường này là bắt buộc."
+          }
+        },
+        "uploadCoverLetterError": "Lỗi! Không thể tải lên tệp!",
+        "uploadResumeError": "Không thể tải lên tệp!",
+        "submitSuccess": "Đã ứng tuyển! Kiểm tra email của bạn để biết thêm thông tin",
+        "submitError": "CÓ LỖI XẢY RA!",
+        "successTitle": "Đã ứng tuyển!"
+      }
+    },
+    "userNav": {
+      "login": "Đăng nhập",
+      "profile": "Hồ sơ",
+      "billing": "Thanh toán",
+      "settings": "Cài đặt",
+      "newTeam": "Nhóm mới",
+      "logout": "Đăng xuất",
+      "myListing": "Tin đăng của tôi",
+      "newListing": "Tin đăng mới"
+    },
+    "auth": {
+      "required": "Bạn phải đăng nhập để xem nội dung này!"
+    },
+    "Settings": {
+      "phone": "Số điện thoại",
+      "email": "Email",
+      "sidebarBasicInfo": "Thông tin cơ bản",
+      "sidebarSecurity": "Bảo mật",
+      "sidebarGoPro": "Nâng cấp Pro",
+      "title": "Cài đặt",
+      "nameBio": "Tên, Tiểu sử & Giới tính",
+      "nameBioDesc": "Cập nhật tên hiển thị, tiểu sử, giới tính và các thông tin khác.",
+      "yourName": "Tên của bạn",
+      "bio": "Tiểu sử",
+      "gender": "Giới tính",
+      "selectGender": "Chọn giới tính",
+      "male": "Nam",
+      "female": "Nữ",
+      "other": "Khác",
+      "avatar": "Ảnh đại diện",
+      "avatarDesc": "Tải lên ảnh đại diện mới.",
+      "changePassword": "Đổi mật khẩu",
+      "changePasswordDesc": "Cập nhật mật khẩu tài khoản của bạn.",
+      "newPassword": "Mật khẩu mới",
+      "confirmPassword": "Xác nhận mật khẩu",
+      "save": "Lưu",
+      "goProTitle": "Nâng cấp Pro",
+      "goProDesc": "Mở khóa tính năng cao cấp và lợi ích.",
+      "goProContent": "Đăng ký ngay để truy cập các tính năng độc quyền!",
+      "upgrade": "Nâng cấp",
+      "validation": {
+        "nameRequired": "Tên là bắt buộc.",
+        "bioRequired": "Tiểu sử là bắt buộc.",
+        "genderRequired": "Giới tính là bắt buộc.",
+        "avatarRequired": "Vui lòng tải lên ảnh đại diện.",
+        "ageRequirement": "Bạn PHẢI từ 18 tuổi trở lên để sử dụng nextwaves",
+        "dobRequired": "Ngày sinh là bắt buộc."
+      },
+      "saved": "Các thay đổi của bạn đã được lưu.",
+      "sidebarAvatar": "Tải lên ảnh đại diện",
+      "uploadAvatar": "Chọn một hình ảnh",
+      "upload": "Tải lên",
+      "uploadAvatarDesc": "Ảnh đại diện này sẽ được CÔNG KHAI",
+      "avatarUploaded": "Ảnh đại diện của bạn đã được tải lên.",
+      "basicInfoUpdateFailed": "Không thể cập nhật thông tin cơ bản",
+      "basicInfoUpdated": "Thông tin cơ bản đã được cập nhật",
+      "error": "Đã xảy ra lỗi!",
+      "pickDate": "Chọn ngày",
+      "dob": "Ngày sinh",
+      "isPublic": "Thông tin này là CÔNG KHAI cho tất cả mọi người, bao gồm cả người dùng chưa đăng ký.",
+      "isPublicSpecific": "Thông tin này là CÔNG KHAI chỉ cho nextwaves và 'nhà tuyển dụng'.",
+      "errorSelectSomeFile": "Chọn một số tệp để cập nhật",
+      "avatarSettings": {
+        "updated": "Đã cập nhật ảnh đại diện!"
+      },
+      "someThingWentWrong": "Đã xảy ra lỗi!",
+      "alreadyPro": "Bạn đã là người dùng PREMIUM!"
+    },
+    "menu": {
+      "allApps": "Tất cả ứng dụng",
+      "device": "Thiết bị"
+    },
+    "boxes": {
+      "checkout": {
+        "name": "Thanh toán",
+        "description": "Quản lý thanh toán và giao dịch của khách hàng"
+      },
+      "smart": {
+        "name": "Thẻ thông minh",
+        "description": "Kiểm tra các thẻ",
+        "toast": {
+          "title": "Đã kết nối",
+          "description": "Kết nối thành công tới Websocket server"
+        }
+      },
+      "imports": {
+        "name": "Nhập kho",
+        "description": "Quản lý nhập kho và mức tồn kho"
+      },
+      "inactive": {
+        "name": "Không hoạt động",
+        "description": "Xem và quản lý các mục và tài khoản không hoạt động"
+      },
+      "patient": {
+        "name": "Bệnh nhân",
+        "description": "Truy cập và quản lý hồ sơ bệnh nhân"
+      },
+      "customer": {
+        "name": "Khách hàng",
+        "description": "Quản lý khách hàng và thông tin liên quan"
+      },
+      "cabinet": {
+        "name": "Tủ thuốc",
+        "description": "Quản lý kho sản phẩm và chi tiết tủ thuốc"
+      }
+    },
+    "LOGIN_SUCCESS": "Đăng nhập thành công",
+    "LOGIN_FAILED": "Đăng nhập thất bại",
+    "LOGIN_FAILED_INVALID_CREDENTIALS": "Đăng nhập thất bại: Thông tin đăng nhập không hợp lệ",
+    "TOKEN_INVALID": "Token không hợp lệ",
+    "TOKEN_NOT_FOUND": "Không tìm thấy token",
+    "TOKEN_EXPIRED": "Token đã hết hạn. Vui lòng thử đăng nhập lại.",
+    "NOT_THING_CHANGED": "Đã cập nhật nhưng không có gì thay đổi",
+    "UPDATED": "Đã cập nhật",
+    "DELETED": "Đã xóa",
+    "CREATED": "Đã tạo",
+    "CREATED_FAILED": "Tạo thất bại",
+    "CREATED_FAILED_DUPLICATE": "Tạo thất bại: Trùng lặp",
+    "CREATED_FAILED_INVALID": "Tạo thất bại: Không hợp lệ",
+    "CREATED_FAILED_INVALID_EMAIL": "Tạo thất bại: Email không hợp lệ",
+    "CREATED_FAILED_INVALID_PHONE": "Tạo thất bại: Số điện thoại không hợp lệ",
+    "USER_EXISTS": "Người dùng đã tồn tại",
+    "ENCRYPTION_KEY_NOT_INCLUDED": "Không có khóa mã hóa",
+    "EMAIL_IS_NOT_FORMAT": "Email không đúng định dạng",
+    "EMAIL_IS_NOT_EMPTY": "Email là bắt buộc",
+    "PHONE_IS_REQUIRED": "Số điện thoại là bắt buộc",
+    "PHONE_IS_NOT_FORMAT": "Số điện thoại không đúng định dạng",
+    "PASSWORD_IS_REQUIRED": "Mật khẩu là bắt buộc",
+    "PASSWORD_IS_NOT_FORMAT": "Mật khẩu không đúng định dạng",
+    "PASSWORD_IS_NOT_MATCH": "Mật khẩu không khớp",
+    "INTERNAL_SERVER_ERROR": "Lỗi máy chủ nội bộ",
+    "FORBIDDEN": "Bị cấm",
+    "FORBIDDEN_RESOURCES": "Bạn không có quyền truy cập tài nguyên này",
+    "TRANSLATE_NOT_FOUND": "Không tìm thấy bản dịch",
+    "INPUT_IS_INVALID_TYPE": "Đầu vào không hợp lệ",
+    "USER_CREATED": "Đã tạo người dùng",
+    "TITLE_REQUIRED": "Tiêu đề là bắt buộc.",
+    "DESCRIPTION_REQUIRED": "Mô tả là bắt buộc.",
+    "LOCATION_REQUIRED": "Địa điểm là bắt buộc.",
+    "CATEGORY_REQUIRED": "Danh mục là bắt buộc.",
+    "OPEN_FOR_REQUIRED": "Đối tượng mở là bắt buộc.",
+    "IS_PUBLIC_REQUIRED": "Trạng thái công khai là bắt buộc.",
+    "IS_OPEN_REQUIRED": "Trạng thái mở là bắt buộc.",
+    "IS_LGBT_REQUIRED": "Trạng thái LGBT là bắt buộc.",
+    "WITH_FRIENDS_REQUIRED": "Trạng thái với bạn bè là bắt buộc.",
+    "TAGS_REQUIRED": "Thẻ là bắt buộc.",
+    "QUESTIONS_REQUIRED": "Câu hỏi là bắt buộc.",
+    "POST_NOT_FOUND": "Không tìm thấy bài đăng",
+    "LOGIN_FAILED_ACCOUNT_NOT_ACTIVE": "Đăng nhập thất bại: Tài khoản chưa kích hoạt",
+    "CAN_NOT_LOGIN_WITH_LINKEDIN": "Không thể đăng nhập bằng LinkedIn",
+    "INVALID_REQUEST_NOT_MATCH": "Yêu cầu không hợp lệ! Token của bạn không khớp. Vui lòng thử lại",
+    "EXPIRED": "Token đã hết hạn! Vui lòng thử lại để đặt lại mật khẩu",
+    "USER_NOT_FOUND": "Không tìm thấy người dùng",
+    "POST_CREATED": "Đã tạo bài đăng",
+    "POST_LIMIT_EXCEEDED": "Bạn đã đăng quá nhiều! Vui lòng đợi một tháng để đăng tiếp",
+    "POST_UPDATED": "Đã cập nhật bài đăng!",
+    "EMAIL_NOT_VERIFIED": "Email chưa được xác minh! Vui lòng xác minh email của bạn trên LinkedIn",
+    "confirmation": {
+      "title": "Xác nhận",
+      "success": "Tài khoản của bạn đã được xác nhận!"
+    },
+    "loading": "Đang tải...",
+    "MALE": "Nam",
+    "FEMALE": "Nữ",
+    "OTHER": "Khác",
+    "NOT_SPECIFIED": "Chưa thiết lập",
+    "Checkout": {
+      "pageTitle": "Thanh toán",
+      "searchPlaceholder": "Tìm kiếm sản phẩm...",
+      "sku": "Mã SKU",
+      "productName": "Tên sản phẩm",
+      "quantity": "Số lượng",
+      "unitPrice": "Đơn giá",
+      "totalPrice": "Tổng tiền",
+      "orderSummaryTitle": "Tóm tắt đơn hàng",
+      "subtotal": "Tổng phụ",
+      "discount": "Giảm giá",
+      "tax": "Thuế",
+      "totalDue": "Tổng cộng",
+      "amountPaid": "Số tiền đã thanh toán",
+      "choosePaymentMethod": "Chọn phương thức thanh toán",
+      "cash": "Tiền mặt",
+      "bankTransfer": "Chuyển khoản ngân hàng",
+      "card": "Thẻ",
+      "eWallet": "Ví điện tử",
+      "checkout": "Thanh toán",
+      "checkoutAlert": "Thanh toán đơn hàng thành công!",
+      "orderName": "Đơn hàng {num}",
+      "noOrderMessage": "Không tìm thấy đơn hàng nào.",
+      "addOrder": "Thêm đơn hàng",
+      "closeTab": "x",
+      "addNewOrder": "Thêm đơn hàng mới",
+      "cartEmpty": "Không có sản phẩm trong giỏ hàng"
+    }
+  }

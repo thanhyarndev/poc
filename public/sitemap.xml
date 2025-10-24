@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Root URLs -->
+  <url>
+    <loc>https://nextwaves.vn/</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/login</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/registration</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/listing</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/about</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/post-listing</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/profile</loc>
+  </url>
+  
+  <url>
+    <loc>https://nextwaves.vn/profile/me</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/settings</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/me</loc>
+  </url>
+  
+  <!-- English Localized URLs -->
+  <url>
+    <loc>https://nextwaves.vn/en/</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/login</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/registration</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/listing</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/about</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/post-listing</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/profile</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/profile/me</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/settings</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/en/me</loc>
+  </url>
+  
+  <!-- Vietnamese Localized URLs -->
+  <url>
+    <loc>https://nextwaves.vn/vi/</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/login</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/registration</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/listing</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/about</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/post-listing</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/profile</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/profile/me</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/settings</loc>
+  </url>
+  <url>
+    <loc>https://nextwaves.vn/vi/me</loc>
+  </url>
+
+</urlset>

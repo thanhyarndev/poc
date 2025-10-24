@@ -1,0 +1,12 @@
+# robots.txt for https://nextwaves.vn/
+
+Sitemap: https://nextwaves.vn/sitemap.xml
+
+User-agent: *
+
+Disallow: /login
+Disallow: /registration
+Disallow: /profile/
+Disallow: /settings
+Disallow: /me
+Allow: /

@@ -1,0 +1,470 @@
+{
+  "login": {
+    "title": "Sign In",
+    "description": "Use your username or phone number to access your account.",
+    "username": "Username or Phone Number",
+    "usernamePlaceholder": "Enter your username or phone number",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "submit": "Sign In",
+    "linkedin": "Sign in with LinkedIn",
+    "noAccount": "New here?",
+    "signup": "Create an account",
+    "error": "Invalid username or password.",
+    "loading": "Loading..."
+  },
+  "registration": {
+    "title": "Sign Up",
+    "description": "Create a new account to get started.",
+    "username": "Username",
+    "usernamePlaceholder": "Choose a username",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "password": "Password",
+    "passwordPlaceholder": "Choose a password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter your password",
+    "submit": "Sign Up",
+    "alreadyAccount": "Already have an account?",
+    "login": "Log in",
+    "message": {
+      "required": "This field is required.",
+      "invalidEmail": "Invalid email address.",
+      "minPassword": "Password must be at least 6 characters.",
+      "passwordMismatch": "Passwords must match.",
+      "success": "Registration successful! But your account is NOT activate yet! Please check your email to verify your account!",
+      "captchaExpired": "Captcha expired!"
+    },
+    "captcha": "Verify that your are not robot",
+    "name": "Your full name",
+    "namePlaceholder": "Your real full-name",
+    "gender": "Gender",
+    "genderSelect": "Choose your gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "success": "Registration Success"
+  },
+  "jobs": {
+    "title": "Find Your Next Company",
+    "filters": {
+      "search": {
+        "label": "Search Company",
+        "placeholder": "Search by title, keywords..."
+      },
+      "category": {
+        "placeholder": "Select Company Type",
+        "label": "Type",
+        "Relationship": "Company",
+        "Friends": "Friends",
+        "Activity": "Activity"
+      },
+      "location": {
+        "label": "Location",
+        "remote": "Remote",
+        "onsite": "On-site",
+        "hybrid": "Hybrid"
+      },
+      "hours": {
+        "label": "Required Hours",
+        "allTime": "All time",
+        "lessThan20": "Less than 20hrs/week",
+        "between20And30": "20-30 hrs/week",
+        "moreThan30": "More than 30hrs/week"
+      },
+      "salary": {
+        "label": "Salary Range",
+        "any": "Any",
+        "under50k": "Under $50k",
+        "50kTo100k": "$50k - $100k",
+        "100kPlus": "$100k+"
+      },
+      "jobLocation": {
+        "label": "Location",
+        "placeholder": "Vietnam"
+      },
+      "apply": "Apply"
+    },
+    "listing": {
+      "applicants": "applicants",
+      "postedDate": "{date}",
+      "noJobs": "No jobs found",
+      "loadMore": "More"
+    },
+    "details": {
+      "apply": "Apply Now",
+      "description": "Description",
+      "requirements": "Requirements",
+      "hiringListing": "Meet the hiring team",
+      "selectJob": "Select a job to view details",
+      "aboutCompany": "About the Company",
+      "selectOne": "Select one to view",
+      "edit": "Edit",
+      "viewResume": "PDF - Resume of {name}",
+      "resume": "Resume",
+      "viewCoverLetter": "Cover letter of {name}",
+      "customQuestions": "Answers",
+      "coverLetter": "Cover Letter"
+    }
+  },
+  "jobListing": {
+    "form": {
+      "title": "Post a new listing",
+      "subtitle": "Finding your company",
+      "fields": {
+        "title": {
+          "label": "Title",
+          "placeholder": "Enter the title",
+          "description": "Provide the title of the opportunity you are listing.",
+          "errors": {
+            "required": "Title is required.",
+            "min": "Title must be at least 5 characters."
+          }
+        },
+        "location": {
+          "label": "Location",
+          "placeholder": "Enter the job location",
+          "description": "Specify the city, region, or remote for the position.",
+          "errors": {
+            "required": "Location is required."
+          }
+        },
+        "description": {
+          "label": "Description",
+          "description": "Write a detailed description. Include responsibilities, requirements, and any relevant details, you can share something personal.",
+          "errors": {
+            "required": "Job description is required.",
+            "max": "The description is too long, we only allow 5192 characters"
+          }
+        },
+        "category": {
+          "label": "Select Category",
+          "description": "Choose the category that best fits the job or opportunity.",
+          "options": {
+            "relationship": "Relationship",
+            "friends": "Friends",
+            "activity": "Activity"
+          },
+          "descriptions": {
+            "relationship": "Opportunities for forming or exploring personal relationships.",
+            "friends": "Collaborations or projects with friends or acquaintances.",
+            "activity": "Events or activities involving groups or individuals."
+          },
+          "errors": {
+            "required": "Please select a category."
+          }
+        },
+        "openFor": {
+          "label": "Open For",
+          "description": "Specify the audience or group this opportunity is open to. Remember this option ONLY for display badge, this DOES NOT filter out application, they still can apply to this",
+          "options": {
+            "male": "Male",
+            "female": "Female",
+            "all": "All"
+          },
+          "descriptions": {
+            "male": "Open to male applicants or participants.",
+            "female": "Open to female applicants or participants.",
+            "all": "Open to all genders."
+          },
+          "errors": {
+            "required": "Please specify who this opportunity is open for."
+          }
+        },
+        "tags": {
+          "label": "Tags",
+          "placeholder": "Enter a tag...",
+          "description": "Add tags to categorize your listing.",
+          "errors": {
+            "max": "You can add up to 10 tags.",
+            "unique": "Each tag must be unique."
+          }
+        },
+        "customQuestions": {
+          "label": "Custom Questions",
+          "placeholder": "Enter a question...",
+          "description": "Add any specific questions you’d like to ask.",
+          "errors": {
+            "max": "You can add up to 5 custom questions.",
+            "unique": "Each question must be unique."
+          }
+        },
+        "isPublic": {
+          "label": "Allow other people on the internet/nextwaves to see this posts. Even if it turns off, you still can share the link to this post, and the people who have the link can apply for this."
+        },
+        "isLGBT": {
+          "label": "Is this post open for LGBT?"
+        },
+        "withFriends": {
+          "label": "Is \"hiring team\" has your friends?"
+        }
+      },
+      "submit": "Post Job",
+      "successMessage": "Applied! Remember to check your email daily to hear back from hiring team!",
+      "successTitle": "Posted!"
+    }
+  },
+  "jobApplication": {
+    "form": {
+      "title": "Job Application",
+      "subtitle": "Apply to ",
+      "submit": "Submit Application",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email"
+        },
+        "resume": {
+          "label": "Resume",
+          "description": "Upload your resume in PDF format.",
+          "selectedFile": "Selected Resume",
+          "uploadResumeError": "Please upload a valid PDF file for your resume."
+        },
+        "coverLetter": {
+          "label": "Cover Letter",
+          "description": "Upload your cover letter in PDF format (optional).",
+          "selectedFile": "Selected Cover Letter",
+          "uploadCoverLetterError": "Please upload a valid PDF file for your cover letter."
+        },
+        "coverLetterVideo": {
+          "label": "Cover Letter Video",
+          "description": "Provide a link to your cover letter video (optional) it must be a YouTube video https://www.youtube.com/watch?v=dQw4w9WgXcQ.",
+          "placeholder": "https://youtu.be/"
+        },
+        "questions": {
+          "label": "Additional Questions",
+          "description": "Please answer the following questions."
+        }
+      },
+      "validation": {
+        "fullName": {
+          "required": "Full name is required."
+        },
+        "email": {
+          "required": "Email is required.",
+          "invalid": "Please enter a valid email address."
+        },
+        "resume": {
+          "required": "Resume is required.",
+          "fileType": "Only PDF files are accepted for the resume."
+        },
+        "coverLetter": {
+          "fileType": "Only PDF files are accepted for the cover letter."
+        },
+        "coverLetterVideo": {
+          "invalid": "Please enter a valid URL."
+        },
+        "answers": {
+          "required": "This field is required."
+        }
+      },
+      "uploadCoverLetterError": "Error! Can not upload file!",
+      "uploadResumeError": "Can not upload file!",
+      "submitSuccess": "Applied! Check your email for more information",
+      "submitError": "SOMETHING WENT WRONG!",
+      "successTitle": "Applied!"
+    }
+  },
+  "userNav": {
+    "login": "Login",
+    "profile": "Profile",
+    "billing": "Billing",
+    "settings": "Settings",
+    "newTeam": "New Team",
+    "logout": "Log out",
+    "myListing": "My listing",
+    "newListing": "New Listing"
+  },
+  "auth": {
+    "required": "You must log in to view this content!"
+  },
+  "Settings": {
+    "phone": "Phone Number",
+    "email": "Email",
+    "sidebarBasicInfo": "Basic Info",
+    "sidebarSecurity": "Security",
+    "sidebarGoPro": "Go Pro",
+    "title": "Settings",
+    "nameBio": "Name, Bio & Gender",
+    "nameBioDesc": "Update your display name, bio, gender, and other details.",
+    "yourName": "Your Name",
+    "bio": "Bio",
+    "gender": "Gender",
+    "selectGender": "Select Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "avatar": "Avatar",
+    "avatarDesc": "Upload a new profile picture.",
+    "changePassword": "Change Password",
+    "changePasswordDesc": "Update your account password.",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "save": "Save",
+    "goProTitle": "Go Pro",
+    "goProDesc": "Unlock premium features and benefits.",
+    "goProContent": "Subscribe now to access exclusive features!",
+    "upgrade": "Upgrade",
+    "validation": {
+      "nameRequired": "Name is required.",
+      "bioRequired": "Bio is required.",
+      "genderRequired": "Gender is required.",
+      "avatarRequired": "Please upload an avatar.",
+      "ageRequirement": "You MUST be at least 18 years old to use nextwaves",
+      "dobRequired": "Date of Birth is required."
+    },
+    "saved": "Your changes have been saved.",
+    "sidebarAvatar": "Upload Avatar",
+    "uploadAvatar": "Choose an image",
+    "upload": "Upload",
+    "uploadAvatarDesc": "This avatar will be PUBLIC",
+    "avatarUploaded": "Your avatar has been uploaded.",
+    "basicInfoUpdateFailed": "Failed to update basic info",
+    "basicInfoUpdated": "Basic info updated",
+    "error": "Something went wrong!",
+    "pickDate": "Pick a date",
+    "dob": "Date of Birth",
+    "isPublic": "This information is PUBLIC for everyone, including non-registered users.",
+    "isPublicSpecific": "This information is PUBLIC for nextwaves and 'recruiters' only.",
+    "errorSelectSomeFile": "Select some files to update",
+    "avatarSettings": {
+      "updated": "Avatar Updated!"
+    },
+    "someThingWentWrong": "Something went wrong!",
+    "alreadyPro": "Your already a PREMIUM users!"
+  },
+  "menu": {
+    "allApps": "All apps",
+    "device": "Device",
+    "reader": "Reader",
+    "sensor": "Sensor Control"
+  },
+  "boxes": {
+    "checkout": {
+      "name": "Checkout",
+      "description": "Manage customer checkouts and transactions"
+    },
+    "smart": {
+      "name": "Smart Pads",
+      "description": "Check the tags",
+      "toast": {
+        "title": "Connected",
+        "description": "Successfully connected to WebSocket server"
+      }
+    },
+    "imports": {
+      "name": "Imports",
+      "description": "Manage inventory imports and stock levels"
+    },
+    "inactive": {
+      "name": "Inactive",
+      "description": "View and manage inactive items and accounts"
+    },
+    "patient": {
+      "name": "Patient",
+      "description": "Access patient records and management"
+    },
+    "customer": {
+      "name": "Customer",
+      "description": "Customer management and related information"
+    },
+    "cabinet": {
+      "name": "Cabinet",
+      "description": "Manage product inventory and cabinet details"
+    }
+  },
+  "LOGIN_SUCCESS": "Login Success",
+  "LOGIN_FAILED": "Login Failed",
+  "LOGIN_FAILED_INVALID_CREDENTIALS": "Login Failed Invalid Credentials",
+  "TOKEN_INVALID": "Token Invalid",
+  "TOKEN_NOT_FOUND": "Token not found",
+  "TOKEN_EXPIRED": "Token expired. Please try to login again.",
+  "NOT_THING_CHANGED": "Updated but nothing changed",
+  "UPDATED": "Updated",
+  "DELETED": "Deleted",
+  "CREATED": "Created",
+  "CREATED_FAILED": "Created Failed",
+  "CREATED_FAILED_DUPLICATE": "Created Failed Duplicate",
+  "CREATED_FAILED_INVALID": "Created Failed Invalid",
+  "CREATED_FAILED_INVALID_EMAIL": "Created Failed Invalid Email",
+  "CREATED_FAILED_INVALID_PHONE": "Created Failed Invalid Phone",
+  "USER_EXISTS": "User exists",
+  "ENCRYPTION_KEY_NOT_INCLUDED": "Encryption key not included",
+  "EMAIL_IS_NOT_FORMAT": "Email is not in correct format",
+  "EMAIL_IS_NOT_EMPTY": "Email is required",
+  "PHONE_IS_REQUIRED": "Phone number is required",
+  "PHONE_IS_NOT_FORMAT": "Phone is not in correct format",
+  "PASSWORD_IS_REQUIRED": "Password is required",
+  "PASSWORD_IS_NOT_FORMAT": "Password is not in correct format",
+  "PASSWORD_IS_NOT_MATCH": "Password is not match",
+  "INTERNAL_SERVER_ERROR": "Internal Server Error",
+  "FORBIDDEN": "Forbidden",
+  "FORBIDDEN_RESOURCES": "You don't have permission to access this resources",
+  "TRANSLATE_NOT_FOUND": "Translation not found",
+  "INPUT_IS_INVALID_TYPE": "Input Invalid",
+  "USER_CREATED": "User created",
+  "TITLE_REQUIRED": "Title is required.",
+  "DESCRIPTION_REQUIRED": "Description is required.",
+  "LOCATION_REQUIRED": "Location is required.",
+  "CATEGORY_REQUIRED": "Category is required.",
+  "OPEN_FOR_REQUIRED": "Open for is required.",
+  "IS_PUBLIC_REQUIRED": "Public status is required.",
+  "IS_OPEN_REQUIRED": "Open status is required.",
+  "IS_LGBT_REQUIRED": "LGBT status is required.",
+  "WITH_FRIENDS_REQUIRED": "With friends status is required.",
+  "TAGS_REQUIRED": "Tags are required.",
+  "QUESTIONS_REQUIRED": "Questions are required.",
+  "POST_NOT_FOUND": "Post not found",
+  "LOGIN_FAILED_ACCOUNT_NOT_ACTIVE": "Login Failed Account Not Active",
+  "CAN_NOT_LOGIN_WITH_LINKEDIN": "Can not login with linkedin",
+  "INVALID_REQUEST_NOT_MATCH": "Invalid request! Your token is not match. Please try again",
+  "EXPIRED": "Token is expired! Please retry to reset password",
+  "USER_NOT_FOUND": "User not found",
+  "POST_CREATED": "Post created",
+  "POST_LIMIT_EXCEEDED": "Your already posted too much! Please wait for a month to post again",
+  "POST_UPDATED": "Post updated!",
+  "EMAIL_NOT_VERIFIED": "Email not verified! Please verify your email on LinkedIn",
+  "confirmation": {
+    "title": "Confirmation",
+    "success": "Your account now is confirmed!"
+  },
+  "loading": "Loading...",
+  "MALE": "Male",
+  "FEMALE": "Female",
+  "OTHER": "Other",
+  "NOT_SPECIFIED": "Not set yet",
+  "Checkout": {
+    "pageTitle": "Checkout",
+    "searchPlaceholder": "Search for products...",
+    "sku": "SKU",
+    "productName": "Product Name",
+    "quantity": "Quantity",
+    "unitPrice": "Unit Price",
+    "totalPrice": "Total Price",
+    "orderSummaryTitle": "Order Summary",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "tax": "Tax",
+    "totalDue": "Total Due",
+    "amountPaid": "Amount Paid",
+    "choosePaymentMethod": "Choose Payment Method",
+    "cash": "Cash",
+    "bankTransfer": "Bank Transfer",
+    "card": "Card",
+    "eWallet": "E-Wallet",
+    "checkout": "Checkout",
+    "checkoutAlert": "Order checkout successful!",
+    "orderName": "Order {num}",
+    "noOrderMessage": "No orders found.",
+    "addOrder": "Add Order",
+    "closeTab": "x",
+    "addNewOrder": "Add New Order",
+    "cartEmpty": "No products in cart"
+  }
+}
