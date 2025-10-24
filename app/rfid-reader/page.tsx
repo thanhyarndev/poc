@@ -373,15 +373,21 @@ const ReaderProtocols: Record<string, ReaderProtocol> = {
       }
 
       const data = [];
+      
+      // According to VMR64 document: A, B, C, D are working antennas (00-03)
+      // If set above 03 means ignore it
+      // Only send enabled antennas, set others to 0xFF to ignore
+      
       for (let i = 0; i < 4; i++) {
-        // const antennaId = enabled[i % enabled.length];
-        // data.push(antennaId - 1);
-        // data.push(this.inventorySettings.stayTime);
-        data.push(i);
+        const antennaId = i; // 0, 1, 2, 3
         if (enabled.includes(i + 1)) {
+          // Antenna is enabled, send antenna ID and stay time
+          data.push(antennaId);
           data.push(this.inventorySettings.stayTime);
         } else {
-          data.push(0);
+          // Antenna is disabled, set to 0xFF to ignore (as per document)
+          data.push(0xFF);
+          data.push(0x00);
         }
       }
 
@@ -749,6 +755,51 @@ const MessageBuilder = {
 };
 
 export default function ReaderPage() {
+  // CSS styles for slider
+  const sliderStyles = `
+    .slider::-webkit-slider-thumb {
+      appearance: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #003a70;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .slider::-webkit-slider-thumb:hover {
+      background: #002d54;
+      transform: scale(1.1);
+    }
+    
+    .slider::-moz-range-thumb {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #003a70;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .slider::-moz-range-thumb:hover {
+      background: #002d54;
+      transform: scale(1.1);
+    }
+    
+    .slider::-webkit-slider-track {
+      height: 12px;
+      border-radius: 6px;
+      background: #e5e7eb;
+    }
+    
+    .slider::-moz-range-track {
+      height: 12px;
+      border-radius: 6px;
+      background: #e5e7eb;
+    }
+  `;
   // State
   const [currentProtocol, setCurrentProtocol] = useState<ReaderProtocol>(
     ReaderProtocols.VMR64
@@ -3084,6 +3135,7 @@ export default function ReaderPage() {
 
   return (
     <div className="flex h-screen bg-background">
+      <style dangerouslySetInnerHTML={{ __html: sliderStyles }} />
       {/* Left Sidebar - Controls */}
       <div className="w-96 p-4 space-y-4 overflow-y-auto border-r">
         {/* Header */}
@@ -3547,68 +3599,127 @@ export default function ReaderPage() {
             <CardTitle className="text-sm">Power Settings</CardTitle>
           </CardHeader>
 
-          <CardContent className="space-y-2">
-            {/* 4 ô input – Ant 1, Ant 2, Ant 3, Ant 4 */}
-            <div className="grid grid-cols-4 gap-2">
-              <div className="flex flex-col">
-                <Label className="text-xs text-[#475569]">Ant 1 (dBm)</Label>
-                <Input
-                  type="number"
-                  value={powerSettings.p1}
-                  onChange={(e) =>
-                    setPowerSettings((prev) => ({
-                      ...prev,
-                      p1: +e.target.value,
-                    }))
-                  }
-                  min="0"
-                  max={currentProtocol.name === "NATION" ? "25" : "33"}
-                />
+          <CardContent className="space-y-4">
+            {/* 4 slider cho Ant 1, Ant 2, Ant 3, Ant 4 */}
+            <div className="space-y-4">
+              {/* Antenna 1 */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <Label className="text-sm font-medium text-[#475569]">Antenna 1</Label>
+                  <span className="text-sm font-bold text-[#003a70]">{powerSettings.p1} dBm</span>
+                </div>
+                <div className="relative">
+                  <input
+                    type="range"
+                    min="0"
+                    max={currentProtocol.name === "NATION" ? "25" : "33"}
+                    value={powerSettings.p1}
+                    onChange={(e) =>
+                      setPowerSettings((prev) => ({
+                        ...prev,
+                        p1: parseInt(e.target.value),
+                      }))
+                    }
+                    className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                    style={{
+                      background: `linear-gradient(to right, #003a70 0%, #003a70 ${(powerSettings.p1 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb ${(powerSettings.p1 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb 100%)`
+                    }}
+                  />
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>0</span>
+                    <span>{currentProtocol.name === "NATION" ? "25" : "33"}</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <Label className="text-xs text-[#475569]">Ant 2 (dBm)</Label>
-                <Input
-                  type="number"
-                  value={powerSettings.p2}
-                  onChange={(e) =>
-                    setPowerSettings((prev) => ({
-                      ...prev,
-                      p2: +e.target.value,
-                    }))
-                  }
-                  min="0"
-                  max={currentProtocol.name === "NATION" ? "25" : "33"}
-                />
+
+              {/* Antenna 2 */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <Label className="text-sm font-medium text-[#475569]">Antenna 2</Label>
+                  <span className="text-sm font-bold text-[#003a70]">{powerSettings.p2} dBm</span>
+                </div>
+                <div className="relative">
+                  <input
+                    type="range"
+                    min="0"
+                    max={currentProtocol.name === "NATION" ? "25" : "33"}
+                    value={powerSettings.p2}
+                    onChange={(e) =>
+                      setPowerSettings((prev) => ({
+                        ...prev,
+                        p2: parseInt(e.target.value),
+                      }))
+                    }
+                    className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                    style={{
+                      background: `linear-gradient(to right, #003a70 0%, #003a70 ${(powerSettings.p2 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb ${(powerSettings.p2 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb 100%)`
+                    }}
+                  />
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>0</span>
+                    <span>{currentProtocol.name === "NATION" ? "25" : "33"}</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <Label className="text-xs text-[#475569]">Ant 3 (dBm)</Label>
-                <Input
-                  type="number"
-                  value={powerSettings.p3}
-                  onChange={(e) =>
-                    setPowerSettings((prev) => ({
-                      ...prev,
-                      p3: +e.target.value,
-                    }))
-                  }
-                  min="0"
-                  max={currentProtocol.name === "NATION" ? "25" : "33"}
-                />
+
+              {/* Antenna 3 */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <Label className="text-sm font-medium text-[#475569]">Antenna 3</Label>
+                  <span className="text-sm font-bold text-[#003a70]">{powerSettings.p3} dBm</span>
+                </div>
+                <div className="relative">
+                  <input
+                    type="range"
+                    min="0"
+                    max={currentProtocol.name === "NATION" ? "25" : "33"}
+                    value={powerSettings.p3}
+                    onChange={(e) =>
+                      setPowerSettings((prev) => ({
+                        ...prev,
+                        p3: parseInt(e.target.value),
+                      }))
+                    }
+                    className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                    style={{
+                      background: `linear-gradient(to right, #003a70 0%, #003a70 ${(powerSettings.p3 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb ${(powerSettings.p3 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb 100%)`
+                    }}
+                  />
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>0</span>
+                    <span>{currentProtocol.name === "NATION" ? "25" : "33"}</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <Label className="text-xs text-[#475569]">Ant 4 (dBm)</Label>
-                <Input
-                  type="number"
-                  value={powerSettings.p4}
-                  onChange={(e) =>
-                    setPowerSettings((prev) => ({
-                      ...prev,
-                      p4: +e.target.value,
-                    }))
-                  }
-                  min="0"
-                  max={currentProtocol.name === "NATION" ? "25" : "33"}
-                />
+
+              {/* Antenna 4 */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <Label className="text-sm font-medium text-[#475569]">Antenna 4</Label>
+                  <span className="text-sm font-bold text-[#003a70]">{powerSettings.p4} dBm</span>
+                </div>
+                <div className="relative">
+                  <input
+                    type="range"
+                    min="0"
+                    max={currentProtocol.name === "NATION" ? "25" : "33"}
+                    value={powerSettings.p4}
+                    onChange={(e) =>
+                      setPowerSettings((prev) => ({
+                        ...prev,
+                        p4: parseInt(e.target.value),
+                      }))
+                    }
+                    className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                    style={{
+                      background: `linear-gradient(to right, #003a70 0%, #003a70 ${(powerSettings.p4 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb ${(powerSettings.p4 / (currentProtocol.name === "NATION" ? 25 : 33)) * 100}%, #e5e7eb 100%)`
+                    }}
+                  />
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>0</span>
+                    <span>{currentProtocol.name === "NATION" ? "25" : "33"}</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -3616,24 +3727,25 @@ export default function ReaderPage() {
             <Button
               onClick={sendPowerCommand}
               disabled={!isConnected}
-              className="bg-[#003a70] hover:bg-[#002d54] text-white w-full py-2 font-semibold"
+              className="bg-[#003a70] hover:bg-[#002d54] text-white w-full py-3 font-semibold text-base"
             >
               Set Power
             </Button>
 
-            {/* Nút Get Power (nằm ngay dưới Set, cách 1 dòng) */}
+            {/* Nút Get Power */}
             <Button
               onClick={sendGetPowerCommand}
               disabled={!isConnected}
-              className="bg-[#059669] hover:bg-[#047857] text-white w-full py-2 font-semibold mt-1"
+              className="bg-[#059669] hover:bg-[#047857] text-white w-full py-3 font-semibold text-base"
             >
               Get Power
             </Button>
+            
             {currentProtocol.name === "NATION" && (
               <Button
                 onClick={sendQueryRfidAbilityCommand}
                 disabled={!isConnected}
-                className="bg-[#003a70] hover:bg-[#002d54] text-white w-full py-2 font-semibold mt-1"
+                className="bg-[#003a70] hover:bg-[#002d54] text-white w-full py-3 font-semibold text-base"
               >
                 Query RFID Ability
               </Button>
