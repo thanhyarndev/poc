@@ -243,6 +243,7 @@ interface TagData {
     ant4: number;
   };
   rssi: number;
+  maxRssi: number; // Track maximum RSSI value ever seen
   frequency: number;
   firstSeen: Date;
   lastSeen: Date;
@@ -1519,6 +1520,10 @@ export default function ReaderPage() {
         tag.lastSeen = now;
         // Update signal properties with latest values
         tag.rssi = rssi;
+        // Update maxRssi if current RSSI is higher
+        if (rssi > tag.maxRssi) {
+          tag.maxRssi = rssi;
+        }
         tag.antenna = antenna;
         tag.frequency = frequency;
         
@@ -1556,6 +1561,7 @@ export default function ReaderPage() {
           antenna,
           antennaCounts,
           rssi,
+          maxRssi: rssi, // Initialize maxRssi with initial RSSI
           frequency,
           firstSeen: now,
           lastSeen: now,
@@ -1843,7 +1849,8 @@ export default function ReaderPage() {
         return false;
       if (epcIncludeArray.length > 0 && !epcIncludeArray.includes(tag.epc))
         return false;
-      if (tag.rssi < minRssi) return false;
+      // For RSSI filter, check if tag has ever met the minimum RSSI threshold
+      if (tag.maxRssi < minRssi) return false;
       
       // For antenna filter, check if tag has been read from the filtered antenna
       if (antennaFilter && antennaFilter !== "all") {
@@ -2696,7 +2703,8 @@ export default function ReaderPage() {
     if (epcIncludeArray.length > 0 && !epcIncludeArray.includes(tag.epc)) {
       return false;
     }
-    if (tag.rssi < minRssiRef.current) {
+    // For RSSI filter, check if tag has ever met the minimum RSSI threshold
+    if (tag.maxRssi < minRssiRef.current) {
       return false;
     }
     // For antenna filter, check if tag has been read from the filtered antenna
